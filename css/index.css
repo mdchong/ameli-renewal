@@ -1,0 +1,559 @@
+/* CSS Reset by Andy Bell */
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@font-face {
+  font-family: "Made Saonara";
+  src: url(../assets/font/MADESAONARA.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #000000;
+  color: white;
+  margin: 0;
+  min-height: 100svh;
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Made Saonara", "Playfair", serif;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation.main {
+  background-color: #F7F2E7;
+  color: #9C1007;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  z-index: 100;
+  transition: all 0.2s ease-in;
+}
+.navigation.main a {
+  font-family: "Made Saonara", "Playfair", serif;
+  padding: 1.25rem;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+.navigation.main a:hover {
+  background-color: #9C1007;
+  color: #F7F2E7;
+}
+.navigation.main .has-dropdown {
+  position: relative;
+}
+.navigation.main .has-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #F7F2E7;
+  color: #9C1007;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.navigation.main .has-dropdown:hover .dropdown {
+  max-height: 500px;
+}
+.navigation.main .has-dropdown .sub-list a:hover {
+  color: #F7F2E7;
+}
+
+.show-menu {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.show-menu span, .show-menu::before, .show-menu::after {
+  width: 100%;
+  height: 2px;
+  margin: 2px 0;
+  background-color: #9C1007;
+}
+.show-menu::before, .show-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  transition: all 0.2s;
+}
+.show-menu::after {
+  top: auto;
+  bottom: 0;
+}
+
+#mobile-dropdown:checked ~ .show-menu span {
+  background: transparent;
+}
+#mobile-dropdown:checked ~ .show-menu:before {
+  top: 9px;
+  transform: rotate(45deg);
+}
+#mobile-dropdown:checked ~ .show-menu:after {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+#mobile-dropdown:checked ~ .navigation.main {
+  transform: translate(0);
+}
+
+.user-interaction {
+  display: flex;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem;
+}
+header .brand-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.hero {
+  position: relative;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/decorative/main-deco.svg) no-repeat center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+.hero h1 {
+  margin: 0;
+  color: #9C1007;
+  font-size: 2.5rem;
+  line-height: 100%;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  padding: 1rem 1.5rem;
+}
+.hero figure {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+.hero figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: 1.5rem;
+  padding-top: 5.25rem;
+}
+.hero figure figcaption {
+  position: absolute;
+  font-family: "Made Saonara", "Playfair", serif;
+  font-size: 0.75rem;
+  color: #9C1007;
+  transform: rotate(90deg);
+  top: 5%;
+  right: -1rem;
+}
+.hero button {
+  visibility: hidden;
+  width: 1px;
+  padding: 0;
+  margin: 0;
+}
+
+.about p {
+  margin: 0;
+  font-family: "Made Saonara", "Playfair", serif;
+  color: #9C1007;
+  text-align: end;
+  padding: 0 1rem;
+  font-size: 1rem;
+  max-width: 83.75rem;
+  line-height: 120%;
+}
+.about p:last-child {
+  font-size: 2rem;
+  padding-bottom: 4.5rem;
+}
+
+.new-look {
+  background: #F7F2E7;
+  color: #9C1007;
+  text-align: center;
+  font-family: "Made Saonara", "Playfair", serif;
+}
+.new-look .new-look-image {
+  background-color: #9C1007;
+  color: #F7F2E7;
+}
+.new-look .carousel-section {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.new-look .carousel-section h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 1.5rem;
+  border-bottom: 1px solid #9C1007;
+  line-height: 100%;
+}
+.new-look .carousel-section img {
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+.new-look .carousel-section h3 {
+  max-width: 12.5rem;
+  margin: 0 auto;
+  padding-bottom: 0.75rem;
+}
+.new-look .carousel-section p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  line-height: 100%;
+}
+.new-look .carousel-section .old-price {
+  font-size: 0.75rem;
+}
+.new-look .carousel-section .current-price {
+  font-size: 1rem;
+}
+.new-look .carousel-section .carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.new-look .carousel-section .carousel-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #9C1007;
+  min-width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  display: none;
+}
+.new-look .carousel-section .carousel-item.active {
+  opacity: 1;
+  display: block;
+}
+.new-look .carousel-section .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9C1007;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 4rem;
+  font-weight: 800;
+}
+.new-look .carousel-section .carousel-btn.left {
+  left: 0.5rem;
+}
+.new-look .carousel-section .carousel-btn.right {
+  right: 0.5rem;
+}
+
+.view-more {
+  border: none;
+  background: #9C1007;
+  color: #F7F2E7;
+  font-family: "Made Saonara", "Playfair", serif;
+  font-size: 0.75rem;
+  padding: 1rem 3.25rem;
+  margin: 1.25rem auto;
+}
+
+.decorative {
+  position: relative;
+  padding-top: 6.5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+.decorative .text-background {
+  color: #9C1007;
+  font-family: "Made Saonara", "Playfair", serif;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+.decorative .text-background .overflow-text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  transform: translateX(-20vw);
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+.decorative .text-background .overflow-text.two {
+  top: 15%;
+  left: 0;
+  transform: translateX(-30vw);
+}
+.decorative .text-background .overflow-text.three {
+  top: 20%;
+  left: 0;
+  transform: translateX(-20vw);
+}
+.decorative .text-background.bottom .overflow-text.one {
+  top: 53%;
+  z-index: 10;
+}
+.decorative .text-background.bottom .overflow-text.two {
+  top: 58%;
+  z-index: 10;
+}
+.decorative .decorative-images {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.decorative .decorative-images .deco.one {
+  max-width: 13.125rem;
+  height: auto;
+  display: block;
+  margin-left: 1rem;
+  z-index: 1;
+}
+.decorative .decorative-images .deco.two {
+  max-width: 11rem;
+  height: auto;
+  display: block;
+  align-self: flex-end;
+  margin-right: 1rem;
+}
+
+.best {
+  background-color: #F7F2E7;
+  color: #9C1007;
+  text-align: center;
+  font-family: "Made Saonara", "Playfair", serif;
+}
+.best h2 {
+  font-size: 2rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #9C1007;
+}
+.best .item-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.best .item-list h3 {
+  font-size: 0.875rem;
+  max-width: 8.25rem;
+  margin: 0 auto 1rem auto;
+}
+.best .item-list p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  line-height: 100%;
+}
+.best .item-list .best-item {
+  padding: 1.5rem 0 1.25rem 0;
+  border: 0.5px solid #9C1007;
+}
+
+.decorative-two {
+  position: relative;
+}
+.decorative-two figure {
+  display: inline-block;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  margin: 0;
+}
+.decorative-two figure img {
+  display: block;
+}
+.decorative-two figure figcaption {
+  position: absolute;
+  transform: rotate(90deg);
+  font-family: "Made Saonara", "Playfair", serif;
+  color: #9C1007;
+  font-size: 0.875rem;
+}
+.decorative-two figure button {
+  background: none;
+  border: none;
+  width: 4rem;
+  height: auto;
+  transform: rotate(-90deg);
+}
+.decorative-two #look-one img {
+  max-width: 18rem;
+  padding-top: 7.75rem;
+  align-self: flex-end;
+}
+.decorative-two #look-one figcaption {
+  top: 28%;
+  left: 2%;
+}
+.decorative-two #look-one .line-deco {
+  position: absolute;
+  left: -30vw;
+  transform: rotate(-100deg);
+  z-index: 2;
+}
+.decorative-two #look-one button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.decorative-two #look-one button img {
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+.decorative-two .teary p:first-child {
+  font-family: "Made Saonara", "Playfair", serif;
+  padding: 2rem 1rem 1rem;
+  margin: 0;
+  font-size: 2rem;
+  color: #9C1007;
+  line-height: 140%;
+}
+.decorative-two .teary p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.875rem;
+  padding: 0 1rem;
+  margin: 0;
+  color: #999999;
+}
+.decorative-two .teary p:last-child {
+  color: #FFFFFF;
+}
+.decorative-two #look-two > img {
+  max-width: 16rem;
+  padding-top: 5.75rem;
+}
+.decorative-two #look-two button {
+  position: absolute;
+  bottom: 8px;
+  left: 185px;
+}
+.decorative-two #look-two figcaption {
+  top: 30%;
+  left: 65%;
+}
+.decorative-two #look-three > img {
+  max-width: 14rem;
+  align-self: flex-end;
+  padding-top: 6.25rem;
+}
+.decorative-two #look-three button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.decorative-two #look-three figcaption {
+  top: 25%;
+  right: 55%;
+}
+.decorative-two .line-deco-two {
+  position: absolute;
+  top: 60%;
+  right: 0;
+}
+
+.promotion h2 {
+  font-family: "Made Saonara", "Playfair", serif;
+}
+
+/*# sourceMappingURL=index.css.map */

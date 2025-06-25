@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Narcissism Lip Tint 718 Cherrytin",
+        "alt": "Ameli Narcissism Lip Tint 718 Cherrytin",
+        "old-price": 20.00,
+        "discount": 10,
+        "new-price": 18.00,
+        "image": "./assets/images/718 cherrytin.png"
+    },
+    {
+        "id": 2,
+        "name": "Narcissism Lip Tint 712 Every Coral",
+        "alt": "Ameli Narcissism Lip Tint 712 Every Coral",
+        "old-price": 20.00,
+        "discount": 10,
+        "new-price": 18.00,
+        "image": "./assets/images/everyCoral.png"
+    },
+    {
+        "id": 3,
+        "name": "Narcissism Lip Tint 720 Rose At Night",
+        "alt": "Ameli Narcissism Lip Tint 720 Rose At Night",
+        "old-price": 20.00,
+        "discount": 10,
+        "new-price": 18.00,
+        "image": "./assets/images/roseAtnight.png"
+    }
+]

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michelle Chong">
+    <meta name="descriptiion" content="Discover Ameli, a beauty brand redefining standards with inclusive, high-quality makeup. Our renewed site highlights product textures and colors, celebrating every individual's unique beauty without relying on model imagery.">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon.ico/android-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/favicon.ico/ms-icon-144x144.png">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Ameli</title>
+
+    <!-- Body font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <!-- Menu -->
+        <div class="menu">
+            <!-- Menu Icon -->
+            <input type="checkbox" id="mobile-dropdown" name="mobile-dropdown" hidden>
+            <label for="mobile-dropdown" class="show-menu">
+                <span></span>
+            </label>
+    
+            <h2 hidden>Main Navigation</h2>
+            <nav aria-label="Main navigation" class="navigation main">
+                <ul>
+                    <li class="navigation-list">
+                        <a href="#">New</a>
+                    </li>
+                    <li class="navigation-list">
+                        <a href="#">Best</a>
+                    </li>
+                    <li class="navigation-list has-dropdown">
+                        <a href="#" id="the-list">Shop</a>
+                        <ul class="dropdown">
+                            <li class="sub-list"><a href="#">View All</a></li>
+                            <li class="sub-list"><a href="#">Face</a></li>
+                            <li class="sub-list"><a href="#">Eyes</a></li>
+                            <li class="sub-list"><a href="#">Lip & Cheek</a></li>
+                            <li class="sub-list"><a href="#">Makeup Tools</a></li>
+                            <li class="sub-list"><a href="#">Makeup Set</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation-list"><a href="#">About Ameli</a></li>
+                    <li class="navigation-list"><a href="#">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="brand-logo">
+            <a href="#" aria-label="Ameli Homepage"><img src="./assets/AmeliLogo.svg" alt="Ameli Logo"></a>
+        </div>
+
+        <div class="user-interaction">
+            <img src="./assets/icons/myPage.svg" alt="">
+            <img src="./assets/icons/cart.svg" alt="">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>AMELI<br />STRIVING FOR <br />YOUR COLOR</h1>
+            <figure>
+                <img src="./assets/images/hero-image.png" alt="Ameli, color red">
+                <figcaption>(01) I AM RED.</figcaption>
+            </figure>
+            <button aria-label="Learn more"><img src="./assets/icons/hero-btn.svg" alt=""></button>
+        </section>
+
+        <section class="about">
+            <h2 hidden>About</h2>
+            <p>STRIVING FOR THE BEST AND ONLY</p>
+            <p>Ameli is a brand since 1996, who explores the best and only to fullfill the needs of yours. We are precise, definite, genuine, authentic, and experienced. We will always strive for the best outcome.</p>
+        </section>
+
+        <section class="new-look">
+            <div class="new-look-image">
+                <div id="left-divison">
+                    <img src="./assets/images/new-look-image.png" alt="">
+                </div>
+                <div id="right-division" hidden> <!-- Hide Later after design -->
+                    <img src="./assets/images/714vamptint.png" alt="Ameli Narcissism Lip Tint 714 Vamptint">
+                    <h3>Narcissism Lip Tint 714 Vamptint</h3>
+                    <p class="old-price" aria-label="Old price: $20.00"><s>$20.00</s></p>
+                    <p class="current-price"><span class="discount">10%</span> $18.00</p>
+                </div>
+            </div>
+
+            <div class="carousel-section">
+                <h2>THE NEW LOOK</h2>
+
+                <button class="carousel-btn left" aria-label="View last slide" onclick="prevSlide()">&#8249;</button>
+
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/718cherrytin.png" alt="">
+                        <h3>Narcissism Lip Tint 718 Cherrytin</h3>
+                        <p class="old-price" aria-label="Old price: $20.00"><s>$20.00</s></p>
+                        <p class="current-price"><span class="discount">10%</span> $18.00</p>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="./assets/images/everyCoral.png" alt="">
+                        <h3>Narcissism Lip Tint 712 Every Coral</h3>
+                        <p class="old-price" aria-label="Old price: $20.00"><s>$20.00</s></p>
+                        <p class="current-price"><span class="discount">10%</span> $18.00</p>
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="./assets/images/roseAtnight.png" alt="">
+                        <h3>Narcissism Lip Tint 720 Rose At Night</h3>
+                        <p class="old-price" aria-label="Old price: $20.00"><s>$20.00</s></p>
+                        <p class="current-price"><span class="discount">10%</span> $18.00</p>
+                    </div>
+                </div>
+
+                <button class="carousel-btn right" aria-label="View next slide" onclick="nextSlide()">&#8250;</button>
+            </div>
+
+            <button class="view-more" aria-label="View More">VIEW MORE</button>
+        </section>
+
+        <section class="decorative">
+            <h2 hidden>Ameli Striving For Your Color</h2>
+
+            <div class="text-background top">
+                <p class="overflow-text one">STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR</p>
+                <p class="overflow-text two">STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR</p>
+                <p class="overflow-text three">STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR</p>
+            </div>
+
+            <div class="text-background bottom">
+                <p class="overflow-text one">STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR</p>
+                <p class="overflow-text two">STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR STRIVING FOR YOUR COLOR</p>
+            </div>
+            <div class="decorative-images">
+                <img src="./assets/images/decorative.png" alt="" class="deco one">
+                <img src="./assets/images/decorative2.png" alt="" class="deco two">
+            </div>
+        </section>
+
+        <section class="best">
+            <h2>AMELI'S BEST</h2>
+
+            <div class="item-list">
+                <div class="best-item">
+                    <img src="./assets/images/shadow.png" alt="">
+                    <h3>Step Basic 243 Macaron Gray</h3>
+                    <p class="old-price" aria-label="Old price: $15.00"><s>$15.00</s></p>
+                    <p class="current-price"><span class="discount">10%</span> $13.50</p>
+                </div>
+    
+                <div class="best-item">
+                    <img src="./assets/images/cushion.png" alt="">
+                    <h3>Tone Up Base Daily Cushion</h3>
+                    <p class="old-price" aria-label="Old price: $26.00"><s>$26.00</s></p>
+                    <p class="current-price"><span class="discount">10%</span> $23.40</p>
+                </div>
+    
+                <div class="best-item">
+                    <img src="./assets/images/714vamptint.png" alt="">
+                    <h3>Narcissism Lip Tint 714 Vamptint</h3>
+                    <p class="old-price" aria-label="Old price: $20.00"><s>$20.00</s></p>
+                    <p class="current-price"><span class="discount">10%</span> $18.00</p>
+                </div>
+    
+                <div class="best-item">
+                    <img src="./assets/images/foundation.png" alt="">
+                    <h3>Cool Through Through Foundation</h3>
+                    <p class="old-price" aria-label="Old price: $21.00"><s>$21.00</s></p>
+                    <p class="current-price"><span class="discount">10%</span> $18.90</p>
+                </div>
+    
+                <div class="best-item">
+                    <img src="./assets/images/brush.png" alt="">
+                    <h3>Ameli Sfumato Brush 01</h3>
+                    <p class="old-price" aria-label="Old price: $21.00"><s>$21.00</s></p>
+                    <p class="current-price"><span class="discount">10%</span> $18.90</p>
+                </div>
+    
+                <div class="best-item">
+                    <img src="./assets/images/718cherrytin.png" alt="">
+                    <h3>Narcissism Lip Tint 718 Cherrytin</h3>
+                    <p class="old-price" aria-label="Old price: $20.00"><s>$20.00</s></p>
+                    <p class="current-price"><span class="discount">10%</span> $18.00</p>
+                </div>
+            </div>
+
+            <button class="view-more" aria-label="View More">View More</button>
+        </section>
+
+        <section class="decorative-two">
+            <figure id="look-one">
+                <img src="./assets/images/decorative3.png" alt="">
+                <figcaption>THE LOOK 01.</figcaption>
+                <button aria-label="Learn more"><img src="./assets/icons/hero-btn.svg" alt=""></button>
+                <img class="line-deco" src="./assets/decorative/sub-deco.svg" alt="">
+            </figure>
+
+            <div class="teary">
+                <p>ORIGINAL TEARY MAKEUP SET</p>
+                <p>
+                    Tins made with oil and water mostly contain pigment only in the water.
+                    <br />
+                    After applying the tint and once the water evaporates, the color changes to something different from what we initially saw.
+                </p>
+                <p>
+                    However, Ameli added pigment to both the oil and the moisture, so it can maintain a clear color even over time. 
+                </p>
+            </div>
+
+            <figure id="look-two">
+                <img src="./assets/images/decorative4.png" alt="">
+                <figcaption>THE LOOK 02.</figcaption>
+                <button aria-label="Learn more"><img src="./assets/icons/hero-btn.svg" alt=""></button>
+            </figure>
+
+            <img class="line-deco-two" src="./assets/decorative/subdeco2.svg" alt="">
+
+            <figure id="look-three">
+                <img src="./assets/images/decorative5.png" alt="">
+                <figcaption>THE LOOK 03.</figcaption>
+                <button aria-label="Learn more"><img src="./assets/icons/hero-btn.svg" alt=""></button>
+            </figure>
+        </section>
+
+        <section class="promotion">
+            <h2>
+                GET READY FOR SPRING
+                <br />
+                THE ONE AND ONLY COLOR
+                <br />
+                AMELI WILL FIND THE BEST FOR YOU
+            </h2>
+
+            <div>
+                <img src="./assets/images/promotion.png" alt="">
+                <p>
+                    UP TO 20% SALE
+                    <br />
+                    2025.6 ~ 2023.7
+                </p>
+            </div>
+        </section>
+
+        <section class="explore-more">
+            <h2>EXPLORE MORE</h2>
+
+            <div class="explore-items"> 
+                <div class="explore-header">
+                    <h3>FACE</h3>
+                    <a href="#" aria-label="Explore Face Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                </div>
+                <img src="./assets/images/explore-face.png" alt="">
+            </div>
+
+            <div class="explore-items"> 
+                <div class="explore-header">
+                    <h3>EYE</h3>
+                    <a href="#" aria-label="Explore Eye Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                </div>
+                <img src="./assets/images/explore-eye.png" alt="">
+            </div>
+
+            <div class="explore-items"> 
+                <div class="explore-header">
+                    <h3>LIP</h3>
+                    <a href="#" aria-label="Explore Lip Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                </div>
+                <img src="./assets/images/explore-lip.png" alt="">
+            </div>
+
+            <div class="explore-items"> 
+                <div class="explore-header">
+                    <h3>TOOL</h3>
+                    <a href="#" aria-label="Explore Tool Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                </div>
+                <img src="./assets/images/explore-tool.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer top">
+            <img src="./assets/AmeliLogo.svg" alt="">
+            <div class="social">
+                <a><img src="./assets/icons/Facebook.svg" alt=""></a>
+                <a><img src="./assets/icons/Instagram.svg" alt=""></a>
+                <a><img src="./assets/icons/Youtube.svg" alt=""></a>
+            </div>
+        </div>
+
+        <div class="footer med">
+            <h2 hidden>Contact Us</h2>
+
+            <div>
+                <h3>CUSTOMER SERVICE</h3>
+                <a href="tel:+8225667889">02-566-7889</a>
+                <p>WEEKDAYS 11:00 - 18:00</p>
+                <p>LUNCH 13:00 - 14:00</p>
+            </div>
+
+            <div>
+                <h3>BANK INFORMATION</h3>
+                <p>Account holder: Ameli Global Co., Ltd.</p>
+                <p>Shinhan 100033950138</p>
+            </div>
+        </div>
+
+        <div class="footer bottom">
+            <h2>Footer Navigation</h2>
+            <nav class="navigation footer">
+                <ul>
+                    <li><a href="#">ABOUT</a>
+                        <ul>
+                            <li><a href="#">About Ameli</a></li>
+                            <li><a href="#">Offline Stores</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MY ACCOUNT</a>
+                        <ul>
+                            <li><a href="#">Member Information</a></li>
+                            <li><a href="#">Membership</a></li>
+                            <li><a href="#">Mileage Status</a></li>
+                            <li><a href="#">Coupons</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MY ORDER</a>
+                        <ul>
+                            <li><a href="#">Order & Delivery</a></li>
+                            <li><a href="#">Cancellation / Exchange / Return</a></li>
+                            <li><a href="#">Reviews</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">HELP</a>
+                        <ul>
+                            <li><a href="#">Notices</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1:1 Inquiry</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>

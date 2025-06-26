@@ -90,6 +90,9 @@
                 <figcaption>(01) I AM RED.</figcaption>
             </figure>
             <button aria-label="Learn more"><img src="./assets/icons/hero-btn.svg" alt=""></button>
+            <div class="line-decoration">
+                <img src="./assets/decorative/main-deco.svg" alt="">
+            </div>
         </section>
 
         <section class="about">
@@ -271,43 +274,42 @@
         <section class="explore-more">
             <h2>EXPLORE MORE</h2>
 
-            <div class="explore-items"> 
-                <div class="explore-header">
-                    <h3>FACE</h3>
-                    <a href="#" aria-label="Explore Face Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+            <div class="explore-container">
+                <div class="explore-items" id="explore-face">
+                    <div class="explore-header">
+                        <h3>FACE</h3>
+                        <a href="#" aria-label="Explore Face Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                    </div>
+                    <img src="./assets/images/explore-face.png" alt="">
                 </div>
-                <img src="./assets/images/explore-face.png" alt="">
-            </div>
-
-            <div class="explore-items"> 
-                <div class="explore-header">
-                    <h3>EYE</h3>
-                    <a href="#" aria-label="Explore Eye Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                <div class="explore-items" id="explore-eyes">
+                    <div class="explore-header">
+                        <h3>EYE</h3>
+                        <a href="#" aria-label="Explore Eye Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                    </div>
+                    <img src="./assets/images/explore-eye.png" alt="">
                 </div>
-                <img src="./assets/images/explore-eye.png" alt="">
-            </div>
-
-            <div class="explore-items"> 
-                <div class="explore-header">
-                    <h3>LIP</h3>
-                    <a href="#" aria-label="Explore Lip Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                <div class="explore-items" id="explore-lip">
+                    <div class="explore-header">
+                        <h3>LIP</h3>
+                        <a href="#" aria-label="Explore Lip Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                    </div>
+                    <img src="./assets/images/explore-lip.png" alt="">
                 </div>
-                <img src="./assets/images/explore-lip.png" alt="">
-            </div>
-
-            <div class="explore-items"> 
-                <div class="explore-header">
-                    <h3>TOOL</h3>
-                    <a href="#" aria-label="Explore Tool Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                <div class="explore-items" id="explore-tool">
+                    <div class="explore-header">
+                        <h3>TOOL</h3>
+                        <a href="#" aria-label="Explore Tool Products"><img src="./assets/icons/arrow.svg" alt="Arrow icon"></a>
+                    </div>
+                    <img src="./assets/images/explore-tool.png" alt="">
                 </div>
-                <img src="./assets/images/explore-tool.png" alt="">
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer top">
-            <img src="./assets/AmeliLogo.svg" alt="">
+            <img src="./assets/ameliLogo_white.svg" alt="" id="footer-logo">
             <div class="social">
                 <a><img src="./assets/icons/Facebook.svg" alt=""></a>
                 <a><img src="./assets/icons/Instagram.svg" alt=""></a>
@@ -333,34 +335,34 @@
         </div>
 
         <div class="footer bottom">
-            <h2>Footer Navigation</h2>
+            <h2 hidden>Footer Navigation</h2>
             <nav class="navigation footer">
                 <ul>
-                    <li><a href="#">ABOUT</a>
-                        <ul>
+                    <li class="footer-list"><a href="#">ABOUT</a>
+                        <ul class="navigation-sub">
                             <li><a href="#">About Ameli</a></li>
                             <li><a href="#">Offline Stores</a></li>
                             <li><a href="#">Terms and Conditions</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">MY ACCOUNT</a>
-                        <ul>
+                    <li class="footer-list"><a href="#">MY ACCOUNT</a>
+                        <ul class="navigation-sub">
                             <li><a href="#">Member Information</a></li>
                             <li><a href="#">Membership</a></li>
                             <li><a href="#">Mileage Status</a></li>
                             <li><a href="#">Coupons</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">MY ORDER</a>
-                        <ul>
+                    <li class="footer-list"><a href="#">MY ORDER</a>
+                        <ul class="navigation-sub">
                             <li><a href="#">Order & Delivery</a></li>
                             <li><a href="#">Cancellation / Exchange / Return</a></li>
                             <li><a href="#">Reviews</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">HELP</a>
-                        <ul>
+                    <li class="footer-list"><a href="#">HELP</a>
+                        <ul class="navigation-sub">
                             <li><a href="#">Notices</a></li>
                             <li><a href="#">Q&A</a></li>
                             <li><a href="#">FAQ</a></li>

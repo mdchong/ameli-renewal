@@ -1,5 +1,7 @@
 "use strict";
 
+
+// Carousel
 let currentIndex = 0;
 const items = document.querySelectorAll('.carousel-item');
 
@@ -21,3 +23,20 @@ function prevSlide() {
 }
 
 showSlide(currentIndex);
+
+// Remove hidden for right division of new look
+function handleResize() {
+    const rightDivision = document.getElementById('right-division');
+    if (window.innerWidth >= 1040) {
+        console.log("viewing!");
+        rightDivision.removeAttribute('hidden');
+    } else {
+        console.log("hiding");
+        rightDivision.setAttribute('hidden', "");
+    }
+}
+
+handleResize();
+
+window.addEventListener('resize', handleResize);
+

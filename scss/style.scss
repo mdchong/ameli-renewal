@@ -1,4 +1,4 @@
-@import './reset.scss';
+@use './reset.scss';
 
 // CSS by Michelle Chong
 
@@ -180,26 +180,18 @@ header {
 .hero {
     // padding: 1rem 1.5rem;
     position: relative;
-
-    &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url(../assets/decorative/main-deco.svg) no-repeat center;
-        background-size: cover;
-        opacity: 0.5;
-        z-index: -1;
-    }
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
 
     h1 {
         margin: 0;
         color: $red;
-        font-size: 2.5rem;
+        font-size: clamp(2.5rem, 1.6325rem + 4.3373vw, 7rem);
         line-height: 100%;
         font-weight: 400;
         letter-spacing: 1.4px;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.5rem 1rem 0;
     }
 
     figure {
@@ -208,13 +200,14 @@ header {
         position: relative;
         display: inline-block;
         margin: 0;
+        align-self: flex-end;
 
         img {
             display: block;
-            max-width: 100%;
+            max-width: 53rem;
+            width: 100%;
             height: auto;
-            margin-left: 1.5rem;
-            padding-top: 5.25rem;
+            padding-top: clamp(5.25rem, 4.5753rem + 3.3735vw, 8.75rem);;
         }
 
         figcaption {
@@ -234,10 +227,28 @@ header {
         padding: 0;
         margin: 0;
     }
+
+    .line-decoration {
+        overflow: visible;
+
+        img {
+            position: absolute;
+            display: block;
+            width: 50rem !important;
+            max-width: none;
+            height: auto;
+            top: 0px;
+            left: -80px;
+            z-index: -1;
+            opacity: 50%;
+        }
+    }
 }
 
 // About
 .about {
+    padding-top: 3rem;
+
     p {
         margin: 0;
         font-family: $main-font;
@@ -245,8 +256,9 @@ header {
         text-align: end;
         padding:  0 1rem;
         font-size: 1rem;
-        max-width: 83.75rem;
+        max-width: 50rem;
         line-height: 120%;
+        margin-left: auto;
     }
 
     p:last-child {
@@ -262,6 +274,18 @@ header {
     color: $red;
     text-align: center;
     font-family: $main-font;
+
+    h3 {
+        max-width: 12.5rem;
+        margin: 0 auto;
+        padding-bottom: 0.75rem;
+    }
+
+    p {
+        margin: 0;
+        padding-bottom: 0.5rem;
+        line-height: 100%;
+    }
 
     .new-look-image {
         background-color: $red;
@@ -285,18 +309,6 @@ header {
             max-width: 300px;
             height: auto;
             margin: 0 auto;
-        }
-
-        h3 {
-            max-width: 12.5rem;
-            margin: 0 auto;
-            padding-bottom: 0.75rem;
-        }
-
-        p {
-            margin: 0;
-            padding-bottom: 0.5rem;
-            line-height: 100%;
         }
 
         .old-price {
@@ -370,7 +382,7 @@ header {
     .text-background {
         color: $red;
         font-family: $main-font;
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 0.6325rem + 4.3373vw, 6rem);
         overflow: hidden;
 
         .overflow-text {
@@ -413,7 +425,7 @@ header {
         flex-direction: column;
 
         .deco.one {
-            max-width: 13.125rem;
+            width: clamp(13.125rem, 5.5828rem + 37.7108vw, 52.25rem);
             height: auto;
             display: block;
             margin-left: 1rem;
@@ -421,7 +433,7 @@ header {
         }
 
         .deco.two {
-            max-width: 11rem;
+            width: clamp(10.4375rem, 3.7748rem + 33.3133vw, 45rem);
             height: auto;
             display: block;
             align-self: flex-end;
@@ -499,7 +511,7 @@ header {
 
     #look-one {
         img {
-            max-width: 18rem;
+            width: clamp(17.6875rem, 10.9767rem + 33.5542vw, 52.5rem);
             padding-top: 7.75rem;
             align-self: flex-end;
         }
@@ -512,8 +524,9 @@ header {
         .line-deco {
             position: absolute;
             left: -30vw;
-            transform: rotate(-100deg);
+            transform: rotate(0eg);
             z-index: 2;
+            width: clamp(22.375rem, 7.7123rem + 73.3133vw, 98.4375rem);
         }
 
         button {
@@ -554,14 +567,14 @@ header {
 
     #look-two {
         & > img {
-            max-width: 16rem;
+            width: clamp(15.625rem, 8.2515rem + 36.8675vw, 53.875rem);
             padding-top: 5.75rem;
         }
 
         button {
             position: absolute;
             bottom: 8px;
-            left: 185px;
+            left: 8px;
         }
 
         figcaption {
@@ -572,7 +585,7 @@ header {
 
     #look-three {
         & > img {
-            max-width: 14rem;
+            width: clamp(13.25rem, 6.1175rem + 35.6627vw, 50.25rem);
             align-self: flex-end;
             padding-top: 6.25rem;
         }
@@ -592,7 +605,7 @@ header {
     .line-deco-two {
         position: absolute;
         top: 60%;
-        right: 0;
+        right: -200px;
     }
 }
 
@@ -600,5 +613,271 @@ header {
 .promotion {
     h2 {
         font-family: $main-font;
+        color: $red;
+        font-size: clamp(2.25rem, 1.8163rem + 2.1687vw, 4.5rem);
+        line-height: 140%;
+        padding-top: 4rem;
+    }
+
+    div {
+        background-color: $red;
+
+        p {
+            color: $beige;
+            font-family: $main-font;
+            text-align: center;
+            padding: 4rem 0;
+            margin: 0;
+            font-size: 2.25rem;
+        }
+    }
+}
+
+// Explore more
+.explore-more {
+    padding: 4rem 1rem 1.5rem;
+
+    h2 {
+        color: $red;
+        font-size: 2.25rem;
+        line-height: 100%;
+        text-align: center;
+        padding-bottom: 1.25rem
+    }
+
+    .explore-container {
+        display: grid;
+        gap: 0.25rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .explore-items {
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 1;
+        }
+
+        .explore-header {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.25rem 0.5rem;
+
+            h3 {
+                margin: 0;
+            }
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    .explore-items:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .explore-items:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+    }
+
+    .explore-items:nth-child(3) {
+        grid-column: 1 /2;
+        grid-row: 3 / 5;
+    }
+
+    .explore-items:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 4 / 6;
+    }
+}
+
+// --- Footer ---
+
+footer {
+    background-color: $red;
+    padding: 1rem 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: $beige;
+    font-family: $main-font;
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .footer.top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .social {
+            display: flex;
+        }
+    }
+
+    .footer.med {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h3 {
+            font-size: 1rem;
+            margin: 0;
+            padding-bottom: 0.5rem;
+        }
+
+        a {
+            font-size: 2rem;
+        }
+
+        div:last-child {
+            p {
+                font-family: $body-font;
+                font-size: 0.875rem;
+                line-height: 200%;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .footer.bottom {
+        .footer-list > a {
+            font-size: 1.25rem;
+        }
+
+        .navigation-sub {
+            font-family: $body-font;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 200%;
+            display: none;
+        }
+
+        .navigation.footer > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+}
+
+// --- Viewport 600px ---
+@media screen and (min-width: 37.5em) {
+    .hero figcaption {
+        top: 30px !important;
+    }
+
+    #look-one {
+        figcaption {
+            top: 16% !important;
+            left: 28% !important;
+        }
+    }
+}
+
+// --- Viewport 652px ---
+@media screen and (min-width: 40.75em) {
+    .hero {
+        h1 {
+            position: absolute;
+            z-index: 2;
+        } 
+
+        .line-decoration img {
+            width: 75rem !important;
+            left: 5%;
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #look-one {
+        figcaption {
+            top: 16% !important;
+            left: 40% !important;
+        }
+    }
+}
+
+// --- viewport 1040 ---
+@media screen and (min-width: 65em) {
+    .new-look {
+        .new-look-image {
+            display: grid;
+            grid-template-columns: 0.60fr 0.4fr;
+        }
+
+        #right-division {
+            padding: 2rem;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .carousel-section {
+            button {
+                display: none;
+            }
+
+            h2 {
+                border-bottom: none;
+            }
+
+            .carousel {
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr);
+                transform: none;
+            }
+
+            .carousel-item {
+                opacity: 1;
+                display: block;
+                border-top: 0.5px solid $red;
+                border-right: 0.25px solid $red;
+                border-left: 0.25px solid $red;
+                border-bottom: 0.25px solid $red;
+            }
+        }
+    }
+
+    .view-more {
+            background-color: $beige;
+            color: $red;
+            text-decoration: underline;
+    }
+
+    .item-list {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+// --- Viewport 1168px ---
+@media screen and (min-width: 73em) {
+    .hero {
+        .line-decoration img {
+            left: 10%;
+            z-index: 2;
+        }
     }
 }
